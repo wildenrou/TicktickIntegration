@@ -1,0 +1,333 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Ticktick",
+    "description": "Authentication",
+    "version": "1.0"
+  },
+  "host": "api.ticktick.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [],
+  "paths": {
+    "/api/v2/task": {},
+    "/task": {},
+    "/open/v1/task": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Task",
+        "description": "Create a task",
+        "operationId": "Task",
+        "parameters": [
+          {
+            "name": "Content-type",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "projectId": {
+                  "type": "string",
+                  "description": "projectId"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "title"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "content"
+                },
+                "desc": {
+                  "type": "string",
+                  "description": "desc"
+                },
+                "allDay": {
+                  "type": "boolean",
+                  "description": "allDay"
+                },
+                "dueDate": {
+                  "type": "string",
+                  "description": "dueDate"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "tags"
+                },
+                "timeZone": {
+                  "type": "string",
+                  "description": "timeZone"
+                },
+                "reminders": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "reminders"
+                },
+                "repeat": {
+                  "type": "string",
+                  "description": "repeat"
+                },
+                "priority": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "priority"
+                },
+                "status": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "status"
+                },
+                "completedTime": {
+                  "type": "string",
+                  "description": "completedTime"
+                },
+                "sortOrder": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "sortOrder"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "status": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "status"
+                      },
+                      "title": {
+                        "type": "string",
+                        "description": "title"
+                      },
+                      "sortOrder": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "sortOrder"
+                      },
+                      "isAllDay": {
+                        "type": "boolean",
+                        "description": "isAllDay"
+                      }
+                    }
+                  },
+                  "description": "items"
+                }
+              },
+              "x-ms-visibility": "important"
+            },
+            "x-ms-visibility": "important"
+          }
+        ],
+        "x-ms-visibility": "important"
+      }
+    },
+    "/open/v1/task/{taskId}": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Update task",
+        "operationId": "Update_a_Task",
+        "x-ms-visibility": "important",
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-visibility": "important"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "projectId": {
+                  "type": "string",
+                  "description": "projectId"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "title"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "content"
+                },
+                "desc": {
+                  "type": "string",
+                  "description": "desc"
+                },
+                "allDay": {
+                  "type": "boolean",
+                  "description": "allDay"
+                },
+                "startDate": {
+                  "type": "string",
+                  "description": "startDate"
+                },
+                "dueDate": {
+                  "type": "string",
+                  "description": "dueDate"
+                },
+                "timeZone": {
+                  "type": "string",
+                  "description": "timeZone"
+                },
+                "reminders": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "reminders"
+                },
+                "repeat": {
+                  "type": "string",
+                  "description": "repeat"
+                },
+                "priority": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "priority"
+                },
+                "status": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "status"
+                },
+                "completedTime": {
+                  "type": "string",
+                  "description": "completedTime"
+                },
+                "sortOrder": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "sortOrder"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "status": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "status"
+                      },
+                      "title": {
+                        "type": "string",
+                        "description": "title"
+                      },
+                      "sortOrder": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "sortOrder"
+                      },
+                      "startDate": {
+                        "type": "string",
+                        "description": "startDate"
+                      },
+                      "isAllDay": {
+                        "type": "boolean",
+                        "description": "isAllDay"
+                      },
+                      "timeZone": {
+                        "type": "string",
+                        "description": "timeZone"
+                      },
+                      "completedTime": {
+                        "type": "string",
+                        "description": "completedTime"
+                      }
+                    }
+                  },
+                  "description": "items"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Updates an existing task in ticktick"
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2-auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://ticktick.com/oauth/authorize",
+      "tokenUrl": "https://ticktick.com/oauth/token",
+      "scopes": {}
+    }
+  },
+  "security": [
+    {
+      "oauth2-auth": []
+    }
+  ],
+  "tags": []
+}
